@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="spinnerItems">
+        <item>Transport</item>
+        <item>Entertainment</item>
+        <item>Food</item>
+        <item>University</item>
+        <item>Personal</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="settings_head_arrays">
+        <item>Feedback</item>
+    </string-array>
+
+    <string-array name="settings_sub_arrays">
+        <item>Have some thoughts? Write to us!</item>
+    </string-array>
+</resources>

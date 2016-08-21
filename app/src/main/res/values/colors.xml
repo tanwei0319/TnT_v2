@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorDarkPurple">#512DA8</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="divider_color">#2b9968</color>
+
+    <color name="list_group_title">#808080</color>
+    <color name="list_items_title">#AAAAAA</color>
+    <color name="group_divider_color">#F1C514</color>
+
+    <color name="list_item_title">#484549</color>
+    <color name="list_background">#FFFDFF</color>
+    <color name="list_background_pressed">#FBC6FF</color>
+    <color name="list_divider">#FF9FDD</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+
+
+    <color name="main_string">#636363</color>
+    <color name="alert_dialog_color">#F38202</color>
 </resources>

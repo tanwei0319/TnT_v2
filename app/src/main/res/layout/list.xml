@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/purple">
 
 
     <ScrollView
@@ -26,6 +27,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_30dp"
         android:text="Long Click to Edit or Delete"
+        android:textColor="@color/white"
         android:padding="1dp" />
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh"
+        android:id="@+id/button"
+        android:textColor="@color/white"
+        android:onClick="show"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
+

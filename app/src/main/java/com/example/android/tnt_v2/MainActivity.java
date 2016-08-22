@@ -4,11 +4,13 @@ package com.example.android.tnt_v2;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,8 +21,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,6 +62,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         displayView(R.id.nav_home);
+
+
     }
 
     @Override
@@ -100,10 +107,17 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public void show(View view) {
+        readRecords();
+        //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        //ft.replace(R.id.button, fragment);
+        //ft.commit();
+    }
     public void displayView(int viewId) {
 
         Fragment fragment = null;
         String title = getString(R.string.app_name);
+
 
         switch (viewId) {
             case R.id.nav_home:
@@ -112,8 +126,10 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.nav_expenditure:
+
                 fragment = new ExpenditureFragment();
                 title = "Expenditure";
+
                 break;
 
         }
@@ -180,7 +196,7 @@ public class MainActivity extends AppCompatActivity
 
 
                                 //((MainActivity) context).countRecords();
-                                //((MainActivity) context).readRecords();
+                                ((MainActivity) context).readRecords();
 
                                 dialog.cancel();
                             }
@@ -189,9 +205,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void show(View view) {
-        readRecords();
-    }
+
 
 
     public void countRecords() {
@@ -203,14 +217,23 @@ public class MainActivity extends AppCompatActivity
         textViewRecordCount.setText(r);
     }
 
+
+
+
     public void readRecords() {
-        setContentView(R.layout.list);
+
+        Fragment fragment = new ExpenditureFragment();
+        //setContentView(R.layout.list);
         LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.linearLayoutRecords);
+        //RelativeLayout layout_item = (RelativeLayout) findViewById(R.id.layout_item);
+        //layout_item.removeAllViews();
         linearLayoutRecords.removeAllViews();
+
 
         List<expense> expenses = new crud(this).read();
 
         if (expenses.size() > 0) {
+
 
             for (expense obj : expenses) {
 
@@ -220,21 +243,60 @@ public class MainActivity extends AppCompatActivity
                 String categ = obj.c;
                 String today = obj.date;
 
-                String textViewContents = today+  "===" + categ + "==" + desc + " = " + tot;
+                //String textViewContents = today+  "===" + categ + "==" + desc + " = " + tot;
 
-                TextView textViewExpenseItem= new TextView(this);
-                textViewExpenseItem.setPadding(0, 10, 0, 10);
-                textViewExpenseItem.setText(textViewContents);
-                textViewExpenseItem.setTag(Integer.toString(id));
+                //TextView textViewExpenseItem= new TextView(this);
+                //textViewExpenseItem.setPadding(0, 10, 0, 10);
+                //textViewExpenseItem.setText(textViewContents);
+                //textViewExpenseItem.setTag(Integer.toString(id));
+                String s1 = today+": "+ categ;
+                TextView dateTV = new TextView(this);
+                dateTV.setPadding(10,0,0,0);
+                dateTV.setTextSize(25);
+                dateTV.setTag(Integer.toString(id));
+                dateTV.setTextColor(getResources().getColor(R.color.white));
+                dateTV.setText(s1);
 
-                textViewExpenseItem.setOnLongClickListener(new longClick());
+                //TextView categTV = new TextView(this);
+                //categTV.setPadding(0,0,0,0);
+                //categTV.setTextSize(17);
+                //categTV.setText(categ);
 
-                linearLayoutRecords.addView(textViewExpenseItem);
+
+                TextView descTV = new TextView(this);
+                descTV.setPadding(40,0,0,0);
+                descTV.setTextSize(22);
+                descTV.setText(desc);
+                descTV.setTextColor(getResources().getColor(R.color.white));
+                descTV.setTag(Integer.toString(id));
+
+                String t = "$"+tot;
+                TextView totTV = new TextView(this);
+                totTV.setPadding(40,0,0,40);
+                totTV.setTextSize(22);
+                totTV.setText(t);
+                totTV.setTextColor(getResources().getColor(R.color.white));
+                totTV.setTag(Integer.toString(id));
+
+
+                /*TextView categTextView = (TextView) findViewById(R.id.txt_categ);
+                TextView dateTextView = (TextView) findViewById(R.id.txt_date);
+                TextView descTextView = (TextView) findViewById(R.id.txt_desc);
+                TextView amtTextView = (TextView) findViewById(R.id.txt_amt);*/
+
+
+                dateTV.setOnLongClickListener(new longClick());
+
+                //linearLayoutRecords.addView(categTV);
+                linearLayoutRecords.addView(dateTV);
+                linearLayoutRecords.addView(descTV);
+                linearLayoutRecords.addView(totTV);
             }
 
         }
 
         else {
+
 
             TextView locationItem = new TextView(this);
             locationItem.setPadding(8, 8, 8, 8);

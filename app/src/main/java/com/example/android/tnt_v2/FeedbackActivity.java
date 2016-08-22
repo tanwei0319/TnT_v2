@@ -33,12 +33,11 @@ public class FeedbackActivity extends AppCompatActivity {
     public String getDeviceName(){
         String manufacturer = Build.MANUFACTURER;
         String model = Build.MODEL;
-        BluetoothAdapter mDevice = BluetoothAdapter.getDefaultAdapter();
-        String userDeviceName = mDevice.getName();
+
         if (model.startsWith(manufacturer)){
-            return capitalize(model) + " by " + userDeviceName;
+            return capitalize(model);
         } else {
-            return capitalize(manufacturer) + " " + model + " by " + userDeviceName;
+            return capitalize(manufacturer) + " " + model;
         }
     }
 

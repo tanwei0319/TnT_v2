@@ -25,6 +25,7 @@ public class expense {
     public static final String entry_ID = "entryid";
     public static final String total = "Total";
     public static final String categ = "Category";
+    //public static final String datee = "Date";
 
     public expense() {
 

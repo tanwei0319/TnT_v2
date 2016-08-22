@@ -3,6 +3,7 @@ package com.example.android.tnt_v2;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -62,6 +63,20 @@ public class crud extends DBhelper {
         return recordCount;
 
     }
+    /*public crud open() throws SQLException {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return this;
+    }
+
+    public Cursor fetch() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] columns = new String[] { expense.datee,expense.categ,expense.description, expense.total};
+        Cursor cursor = db.query("expenses", columns, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor;
+    }*/
 
     public List<expense> read() {
 
@@ -98,6 +113,44 @@ public class crud extends DBhelper {
 
         return recordsList;
     }
+
+
+/*
+    public List<expense> read() {
+
+        List<expense> recordsList = new ArrayList<expense>();
+
+        String sql = "SELECT * FROM expenses ORDER BY id DESC";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+
+                int id = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
+                String desc = cursor.getString(cursor.getColumnIndex("d"));
+                String tot = cursor.getString(cursor.getColumnIndex("t"));
+                String categ = cursor.getString(cursor.getColumnIndex("c"));
+                String today = cursor.getString(cursor.getColumnIndex("date"));
+
+                expense exp = new expense();
+                exp.id = id;
+                exp.d = desc;
+                exp.t = tot;
+                exp.c = categ;
+                exp.date= today;
+
+                recordsList.add(exp);
+
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return recordsList;
+    }*/
 
     public expense readSingleRecord(int expenseId) {
 

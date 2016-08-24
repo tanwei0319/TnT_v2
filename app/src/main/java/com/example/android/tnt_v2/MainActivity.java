@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity
 
 
                                 //((MainActivity) context).countRecords();
-                                ((MainActivity) context).readRecords();
+                                //((MainActivity) context).readRecords();
 
                                 dialog.cancel();
                             }
@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity
 
     public void readRecords() {
 
-        Fragment fragment = new ExpenditureFragment();
+        //Fragment fragment = new ExpenditureFragment();
         //setContentView(R.layout.list);
         LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.linearLayoutRecords);
         //RelativeLayout layout_item = (RelativeLayout) findViewById(R.id.layout_item);
@@ -286,6 +286,8 @@ public class MainActivity extends AppCompatActivity
 
 
                 dateTV.setOnLongClickListener(new longClick());
+                descTV.setOnLongClickListener(new longClick());
+                totTV.setOnLongClickListener(new longClick());
 
                 //linearLayoutRecords.addView(categTV);
                 linearLayoutRecords.addView(dateTV);

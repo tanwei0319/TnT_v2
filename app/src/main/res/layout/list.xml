@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple">
+    android:background="@color/grey">
 
 
     <ScrollView
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_30dp"
         android:text="Long Click to Edit or Delete"
-        android:textColor="@color/white"
+        android:textColor="@color/list_group_title"
         android:padding="1dp" />
 
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="@string/refresh"
         android:id="@+id/button"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="show"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

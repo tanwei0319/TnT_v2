@@ -13,9 +13,9 @@
     <string name="refresh">Retrieve data</string>
 <string name="save">Save</string>
     <string name="empty_list_text">No records found</string>
-<string name="exp">type here!_test13</string>
+<string name="exp">Description (optional)</string>
 <string name="spin">Choose Category Here!</string>
-<string name="add_exp">Please Enter your expense here!!!!!</string>
+<string name="add_exp">Add New Expense</string>
 <string name="rec">records found!</string>
 <string name="showexp">Show list of Expenditure</string>
 

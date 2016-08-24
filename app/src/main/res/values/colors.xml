@@ -8,6 +8,7 @@
 
     <color name="colorDarkPurple">#512DA8</color>
     <color name="purple">#7E57C2</color>
+    <color name="grey">#f0f0f0</color>
 
     <color name="background">#FFFFFF</color>
     <color name="divider_color">#2b9968</color>

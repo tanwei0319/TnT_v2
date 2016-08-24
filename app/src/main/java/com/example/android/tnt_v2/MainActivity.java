@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity
                 dateTV.setPadding(10,0,0,0);
                 dateTV.setTextSize(25);
                 dateTV.setTag(Integer.toString(id));
-                dateTV.setTextColor(getResources().getColor(R.color.white));
+                dateTV.setTextColor(getResources().getColor(R.color.colorDarkPurple));
                 dateTV.setText(s1);
 
                 //TextView categTV = new TextView(this);
@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity
                 descTV.setPadding(40,0,0,0);
                 descTV.setTextSize(22);
                 descTV.setText(desc);
-                descTV.setTextColor(getResources().getColor(R.color.white));
+                descTV.setTextColor(getResources().getColor(R.color.black));
                 descTV.setTag(Integer.toString(id));
 
                 String t = "$"+tot;
@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity
                 totTV.setPadding(40,0,0,40);
                 totTV.setTextSize(22);
                 totTV.setText(t);
-                totTV.setTextColor(getResources().getColor(R.color.white));
+                totTV.setTextColor(getResources().getColor(R.color.colorAccent));
                 totTV.setTag(Integer.toString(id));
 
 

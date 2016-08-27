@@ -1,12 +1,10 @@
 **README -  Team TnT** <br/> 
 ==========================================
-by Tan Wei and Alagappan Lakshmi <br/>
+By Tan Wei and Alagappan Lakshmi <br/>
 <br/>
 
 **Overview of Project** <br/>
 -------------------
-<br/>
-
 This is a project for NUS Orbital 2016. Though the project has already ended, we plan to continue working on the application to further develop our planned features when time permits. <br/>
 <br/>
 Project name             : Tap n Track <br/>
@@ -18,8 +16,7 @@ Mentorship                : None <br/>
 
 **Plans for each Milestone** <br/>
 -------------------
-<br/>
-Our updated plan for each milestone:- <br/>
+Our updated plans for each milestone:- <br/>
 Milestone 1 (Project Ideation): <br/>
 - [x] Finalise on the project idea and the workflow of the application <br/>
 - [x] Decide on the modes available and the basic tabs in the application <br/>
@@ -51,9 +48,7 @@ Provided that we are able to finish building the basic features of Tap n Track, 
 
 **Planned Features** <br/>
 -------------------
-<br/>
-
-We plan to have the following features in the application:- <br/>
+We also plan to have the following features in the application:- <br/>
 - Overview which allows two modes - Budget and Normal <br/>
 - Each mode shows the income,expenditure, balance and the analysis of the expenditure <br/>
 - Users to be able to input income or expenditure with a description and associate it with one of the many categories <br/>
@@ -65,8 +60,6 @@ We plan to have the following features in the application:- <br/>
 
 **User Stories** <br/>
 -------------------
-<br/>
-
 1. As a user, I want to monitor my finances well with a simple and user-friendly application that has a nice user interface.  <br/>
 2. As a user, I want to login to my account to input new income or expenditure with a description, or to view and manage my money flow. <br/>
 3. As a user, I want to set a budget for my expenses and be notified before or when I overspend. <br/>

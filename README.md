@@ -1,11 +1,13 @@
 **README -  Team TnT** <br/> 
 ==========================================
+by Tan Wei and Alagappan Lakshmi <br/>
+<br/>
 
 **Overview of Project** <br/>
 -------------------
 <br/>
 
-This is a project for NUS Orbital 2016. Though the project has already ended, we plan to continue working on the application to further develop our planned features when time permits. 
+This is a project for NUS Orbital 2016. Though the project has already ended, we plan to continue working on the application to further develop our planned features when time permits. <br/>
 <br/>
 Project name             : Tap n Track <br/>
 Project description     : An Android-based application that aims to provide a user-friendly and more convenient platform to track money flow  <br/>

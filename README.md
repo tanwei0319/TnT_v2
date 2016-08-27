@@ -1,9 +1,8 @@
-**README -  Team TnT - Tan Wei and Alagappan Lakshmi** <br/> 
+**README -  Team TnT** <br/> 
 ==========================================
-<br/>
-<br/>
 
 **Overview of Project** <br/>
+-------------------
 <br/>
 
 This is a project for NUS Orbital 2016. Though the project has already ended, we plan to continue working on the application to further develop our planned features when time permits. 
@@ -16,6 +15,7 @@ Mentorship                : None <br/>
 <br/>
 
 **Plans for each Milestone** <br/>
+-------------------
 <br/>
 Our updated plan for each milestone:- <br/>
 Milestone 1 (Project Ideation): <br/>
@@ -48,6 +48,7 @@ Provided that we are able to finish building the basic features of Tap n Track, 
 <br/>
 
 **Planned Features** <br/>
+-------------------
 <br/>
 
 We plan to have the following features in the application:- <br/>
@@ -61,6 +62,7 @@ We plan to have the following features in the application:- <br/>
 <br/>
 
 **User Stories** <br/>
+-------------------
 <br/>
 
 1. As a user, I want to monitor my finances well with a simple and user-friendly application that has a nice user interface.  <br/>

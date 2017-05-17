@@ -11,7 +11,6 @@ Project name             : Tap n Track <br/>
 Project description     : An Android-based application that aims to provide a user-friendly and more convenient platform to track money flow  <br/>
 Student names          : Tan Wei, Alagappan Lakshmi  <br/>
 Level of achievement: Project Gemini  <br/>
-Mentorship                : None <br/>
 <br/>
 
 **Plans for each Milestone** <br/>
